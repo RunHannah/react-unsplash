@@ -17,8 +17,6 @@ class App extends Component {
       .then(resp => { return resp.json() })
       .then(data => {
         this.setState({ photos: data, loading: false})
-        console.log('this.state.photos', this.state.photos);
-        console.log('this.state.loading', this.state.loading);
 
       })
       .catch(function(error) {
@@ -27,8 +25,7 @@ class App extends Component {
   }
   render() {
 
-    const { photos } = this.state.photos
-    console.log('photos', photos);
+    console.log('App component photos', this.state.photos);
 
     return (
       <div>
