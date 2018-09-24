@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Photo from "../components/photo";
 
 class ContentOne extends Component {
   state = {
@@ -21,7 +22,7 @@ class ContentOne extends Component {
         {this.state.loading ? (
           <h3>Retrieving Photos...</h3>
         ) : (
-          <p>Placeholder</p>
+          this.state.photos.map(photo => <Photo key={photo.id} photo={photo} />)
         )}
       </div>
     );

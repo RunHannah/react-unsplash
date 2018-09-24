@@ -37,6 +37,8 @@ img {
 .content-one {
   grid-column: 1 / -1;
   /* grid-area: o; */
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr;
 
   background-color: yellow;
 }
