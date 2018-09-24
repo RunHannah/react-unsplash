@@ -1,7 +1,7 @@
-.container-app {
+.wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 60px 400px 500px;
+  grid-template-rows: 60px 500px 300px;
   /* grid-template-areas:
     "n n n n n n n n n n n n"
     "l l l l l l l l l l l l"
@@ -11,7 +11,15 @@
 .navbar {
   grid-column: 1 / -1;
   /* grid-area: n; */
+
   background-color: orange;
+}
+
+.navbar,
+ul {
+  list-style: none;
+  display: flex;
+  /* justify-content: space-between; */
 }
 
 .landing {
@@ -20,13 +28,15 @@
   background-color: green;
 }
 
-.landing > img {
-  display: inline-block;
+img {
+  object-fit: contain;
+  width: 100%;
+  height: 500px;
 }
 
 .content-one {
   grid-column: 1 / -1;
   /* grid-area: o; */
-  grid-row: span 1;
+
   background-color: yellow;
 }

@@ -22,7 +22,7 @@ class Landing extends Component {
         ) : (
           <div>
             {/* <p>Landing Image</p> */}
-            <img src={this.state.url} alt="random image" />
+            <img src={this.state.url} alt="unsplash" />
           </div>
         )}
       </div>

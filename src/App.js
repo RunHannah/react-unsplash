@@ -28,14 +28,16 @@ class App extends Component {
     console.log("App component photos", this.state.photos);
 
     return (
-      <div className="container-app">
+      <div>
         <Navbar />
         {this.state.loading ? (
           <h2>Loading products...</h2>
         ) : (
-          <Landing photos={this.state.photos} />
+          <div>
+            <Landing photos={this.state.photos} />
+            <ContentOne photos={this.state.photos} />
+          </div>
         )}
-        <ContentOne />
       </div>
     );
   }
