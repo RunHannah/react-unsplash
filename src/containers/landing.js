@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Landing extends Component {
   state = {
-    photos: this.props.photos,
     url: "",
     loading: true
   };
@@ -10,7 +9,7 @@ class Landing extends Component {
   componentDidMount() {
     const randomNumber = Math.floor(Math.random() * 10 + 1);
 
-    const url = this.state.photos[randomNumber].urls.regular;
+    const url = this.props.photos[randomNumber].urls.regular;
     this.setState({ url, loading: false });
   }
 
