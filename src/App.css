@@ -1,23 +1,23 @@
+/********** CSS FLEXBOX **********/
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  height: 70px;
+
+  /* flex-direction: column; */
+  background-color: orange;
+}
+
+/********** CSS GRID **********/
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 60px 500px 300px;
+  grid-template-rows: 500px;
   /* grid-template-areas:
-    "n n n n n n n n n n n n"
     "l l l l l l l l l l l l"
     "o o o o o o o o o o o o "; */
-}
-
-.navbar {
-  grid-column: 1 / -1;
-  /* grid-area: n; */
-}
-
-.navbar,
-ul {
-  list-style: none;
-  display: flex;
-  /* justify-content: space-between; */
 }
 
 .landing {
@@ -43,4 +43,15 @@ img {
   grid-auto-rows: 500px;
   grid-auto-flow: dense;
   padding: 40px;
+  background-color: orange;
+}
+
+.content-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 4fr));
+  grid-gap: 15px;
+  grid-auto-rows: 500px;
+  grid-auto-flow: dense;
+  padding: 40px;
+  background-color: yellow;
 }

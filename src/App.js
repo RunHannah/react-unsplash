@@ -34,7 +34,7 @@ class App extends Component {
         {this.state.loading ? (
           <h2>Loading products...</h2>
         ) : (
-          <div>
+          <div className="wrapper">
             <Landing photos={this.state.photos} />
             <ContentOne photos={this.state.photos} />
             <ContentTwo photos={this.state.photos} />
