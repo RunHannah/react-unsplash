@@ -6,8 +6,8 @@ Returns a collection of curated photos. Built with React and Unsplash API.
 
 ### Deployed here: https://runhannah.github.io/react-unsplash
 
-#### Practice building responsive layouts using CSS Grid.
+#### Practice building responsive layouts using CSS Flex and Grid.
 
-CSS grid
-Random Number for Landing page.
-Nested grid for content-one component.
+- CSS Flex and Grid
+- Random Number for Landing page.
+- Nested grids

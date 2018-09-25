@@ -3,15 +3,12 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <li>
-        <a>Home</a>
+      <li className="unsplash">Unsplash</li>
+      <li className="search">
+        <input type="text" className="search-input" placeholder="search" />
       </li>
-      <li>
-        <a>Page 1</a>
-      </li>
-      <li>
-        <a>Page 2</a>
-      </li>
+      <li className="page-one">Page-1</li>
+      <li className="page-two">Page-2</li>
     </div>
   );
 };
