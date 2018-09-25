@@ -11,8 +11,6 @@
 .navbar {
   grid-column: 1 / -1;
   /* grid-area: n; */
-
-  background-color: orange;
 }
 
 .navbar,
@@ -25,7 +23,7 @@ ul {
 .landing {
   grid-column: 1 / -1;
   /* grid-area: l; */
-  background-color: green;
+  padding: 40px;
 }
 
 img {
@@ -37,8 +35,12 @@ img {
 .content-one {
   grid-column: 1 / -1;
   /* grid-area: o; */
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr 1fr;
 
-  background-color: yellow;
+  /* Nested CSS Grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 4fr));
+  grid-gap: 15px;
+  grid-auto-rows: 500px;
+  grid-auto-flow: dense;
+  padding: 40px;
 }

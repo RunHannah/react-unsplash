@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "./components/navbar";
 import Landing from "./containers/landing";
 import ContentOne from "./containers/content-one";
+import ContentTwo from "./containers/content-two";
 import "./App.css";
 
 const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
@@ -36,6 +37,7 @@ class App extends Component {
           <div>
             <Landing photos={this.state.photos} />
             <ContentOne photos={this.state.photos} />
+            <ContentTwo photos={this.state.photos} />
           </div>
         )}
       </div>

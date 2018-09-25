@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Photo from "../components/photo";
 
-class ContentOne extends Component {
+class ContentTwo extends Component {
   state = {
     loading: true,
     photos: this.props.photos
@@ -17,7 +17,7 @@ class ContentOne extends Component {
     // const { photos } = this.state.photos;
 
     return (
-      <div className="content-one">
+      <div className="content-two">
         {this.state.loading ? (
           <h3>Retrieving Photos...</h3>
         ) : (
@@ -28,4 +28,4 @@ class ContentOne extends Component {
   }
 }
 
-export default ContentOne;
+export default ContentTwo;
