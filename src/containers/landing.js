@@ -20,6 +20,9 @@ class Landing extends Component {
           <h2>Loading Image...</h2>
         ) : (
           <div>
+            <p className="landing-text">
+              Refresh page to view a random photo in collection.
+            </p>
             {/* <p>Landing Image</p> */}
             <img src={this.state.url} alt="unsplash" />
           </div>

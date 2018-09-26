@@ -1,14 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <li className="unsplash">Unsplash</li>
+      <Link to="/" className="unsplash">
+        Unsplash
+      </Link>
       <li className="search">
         <input type="text" className="search-input" placeholder="search" />
       </li>
-      <li className="page-one">Page-1</li>
-      <li className="page-two">Page-2</li>
+      <Link to="/layout-one" className="page-one">
+        Layout One
+      </Link>
+      <Link to="/layout-two" className="page-two">
+        Layout Two
+      </Link>
     </div>
   );
 };

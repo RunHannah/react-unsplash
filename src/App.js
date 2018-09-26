@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Landing from "./containers/landing";
 import ContentOne from "./containers/content-one";
@@ -35,9 +36,17 @@ class App extends Component {
           <h2>Loading products...</h2>
         ) : (
           <div className="wrapper">
-            <Landing photos={this.state.photos} />
-            <ContentOne photos={this.state.photos} />
-            <ContentTwo photos={this.state.photos} />
+            <Switch>
+              <Route exact path="/">
+                <Landing photos={this.state.photos} />
+              </Route>
+              <Route exact path="/layout-one">
+                <ContentOne photos={this.state.photos} />
+              </Route>
+              <Route exact path="/layout-two">
+                <ContentTwo photos={this.state.photos} />
+              </Route>
+            </Switch>
           </div>
         )}
       </div>

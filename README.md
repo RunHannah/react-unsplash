@@ -8,6 +8,9 @@ Returns a collection of curated photos. Built with React and Unsplash API.
 
 #### Practice building responsive layouts using CSS Flex and Grid.
 
+#### Includes React Router
+
 - CSS Flex and Grid
 - Random Number for Landing page.
 - Nested grids
+- React Router
