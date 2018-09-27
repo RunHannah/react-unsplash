@@ -4,18 +4,17 @@ import { Link } from "react-router-dom";
 const Navbar = props => {
   return (
     <div className="navbar">
-      <Link to="/" className="unsplash">
-        Unsplash
+      <Link to="/react-unsplash" className="unsplash">
+        <i class="fas fa-camera" />
       </Link>
       <li className="search">
-        <form onSubmit={props.getPhotos}>
+        <form className="search" onSubmit={props.getPhotos}>
           <input
             className="search-input"
             type="text"
             name="searchInput"
-            placeholder="search for photos"
+            placeholder="Search free photos"
           />
-          <button className="form_button">Search</button>
         </form>
       </li>
       <Link to="/layout-one" className="page-one">

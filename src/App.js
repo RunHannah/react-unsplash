@@ -69,7 +69,7 @@ class App extends Component {
         ) : (
           <div className="wrapper">
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/react-unsplash">
                 <Landing photos={this.state.photos} />
               </Route>
               <Route exact path="/layout-one">
