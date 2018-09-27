@@ -10,16 +10,10 @@
   font-size: 1em;
   padding: 10px;
   align-items: center; /* x-axis */
-
-  /* justify-content: flex-end; */
-  /* justify-content: space-evenly; */
-  /* flex-direction: column; */
-  /* background-color: grey; */
 }
 
 .unsplash {
   flex: 1;
-  /* margin-right: auto; */
 }
 
 .navbar a {
@@ -48,18 +42,9 @@ input {
   font-size: 2em;
 }
 /********** CSS GRID **********/
-.wrapper {
-  display: grid;
-  /* grid-template-columns: repeat(12, 1fr); */
-  /* grid-template-rows: 500px; */
-  /* grid-template-areas:
-    "l l l l l l l l l l l l"
-    "o o o o o o o o o o o o "; */
-}
 
 .landing {
   grid-column: 1 / -1;
-  /* grid-area: l; */
   padding: 40px;
 }
 
@@ -75,9 +60,6 @@ img {
 
 .layout-one {
   grid-column: 1 / -1;
-  /* grid-area: o; */
-
-  /* Nested CSS Grid */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 4fr));
   grid-gap: 15px;
@@ -92,9 +74,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
   grid-gap: 15px;
   grid-auto-rows: 500px;
-  /* grid-auto-flow: dense; */
   padding: 40px;
-  /* background-color: yellow; */
 }
 
 /********** MEDIA **********/

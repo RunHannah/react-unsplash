@@ -5,7 +5,7 @@ const Navbar = props => {
   return (
     <div className="navbar">
       <Link to="/react-unsplash" className="unsplash">
-        <i class="fas fa-camera" />
+        <i className="fas fa-camera" />
       </Link>
       <li className="search">
         <form className="search" onSubmit={props.getPhotos}>
