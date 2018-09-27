@@ -20,7 +20,7 @@ class Landing extends Component {
     return (
       <div className="landing">
         {this.state.loading ? (
-          <h2>Loading Image...</h2>
+          <p>Loading Images...</p>
         ) : (
           <div>
             <p className="landing-text">

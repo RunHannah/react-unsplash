@@ -1,8 +1,6 @@
-### Unsplash
+### Unsplash API Images
 
-** In Progress **
-
-Returns a collection of curated photos. Built with React and Unsplash API.
+Returns a collection of photos and responds in changes to screen width. Built with React and Unsplash API.
 
 ### Deployed here: https://runhannah.github.io/react-unsplash
 
@@ -11,6 +9,6 @@ Returns a collection of curated photos. Built with React and Unsplash API.
 #### Includes React Router
 
 - CSS Flex and Grid
-- Random Number for Landing page.
+- Random Number for Landing page
 - React Router
-- Form input
+- Form for search

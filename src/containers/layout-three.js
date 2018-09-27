@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Photo from "../components/photo";
 
-class LayoutOne extends Component {
+class LayoutThree extends Component {
   state = {
     loading: true
   };
@@ -12,7 +12,7 @@ class LayoutOne extends Component {
 
   render() {
     return (
-      <div className="layout-one">
+      <div className="layout-three">
         {this.props.photos.map(photo => (
           <Photo key={photo.id} photo={photo} />
         ))}
@@ -21,4 +21,4 @@ class LayoutOne extends Component {
   }
 }
 
-export default LayoutOne;
+export default LayoutThree;

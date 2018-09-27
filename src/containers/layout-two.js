@@ -13,11 +13,9 @@ class LayoutTwo extends Component {
   render() {
     return (
       <div className="layout-two">
-        {this.state.loading ? (
-          <h3>Retrieving Photos...</h3>
-        ) : (
-          this.props.photos.map(photo => <Photo key={photo.id} photo={photo} />)
-        )}
+        {this.props.photos.map(photo => (
+          <Photo key={photo.id} photo={photo} />
+        ))}
       </div>
     );
   }

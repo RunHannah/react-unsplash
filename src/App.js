@@ -4,6 +4,8 @@ import Navbar from "./components/navbar";
 import Landing from "./containers/landing";
 import LayoutOne from "./containers/layout-one";
 import LayoutTwo from "./containers/layout-two";
+import LayoutThree from "./containers/layout-three";
+
 import "./App.css";
 
 const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
@@ -59,12 +61,12 @@ class App extends Component {
       <div>
         <Navbar getPhotos={this.getPhotos} />
         {this.state.loading ? (
-          <h2>Loading products...</h2>
+          <p>Loading Images...</p>
         ) : (
           <div>
             <Switch>
-              {/* Hosted on gh-pages to this is the home path */}
-              <Route exact path="/react-unsplash">
+              {/* Hosted on gh-pages so home path is /react-unsplash */}
+              <Route exact path="/react-unsplash/">
                 <Landing photos={this.state.photos} />
               </Route>
               <Route exact path="/layout-one">
@@ -72,6 +74,9 @@ class App extends Component {
               </Route>
               <Route exact path="/layout-two">
                 <LayoutTwo photos={this.state.photos} />
+              </Route>
+              <Route exact path="/layout-three">
+                <LayoutThree photos={this.state.photos} />
               </Route>
             </Switch>
           </div>
