@@ -12,5 +12,5 @@ Returns a collection of curated photos. Built with React and Unsplash API.
 
 - CSS Flex and Grid
 - Random Number for Landing page.
-- Nested grids
 - React Router
+- Form input

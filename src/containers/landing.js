@@ -7,11 +7,14 @@ class Landing extends Component {
   };
 
   componentDidMount() {
-    const randomNumber = Math.floor(Math.random() * 10 + 1);
-
-    const url = this.props.photos[randomNumber].urls.regular;
+    const url = this.props.photos[this.randomNumber()].urls.regular;
     this.setState({ url, loading: false });
   }
+
+  randomNumber = () => {
+    const number = Math.floor(Math.random() * 10 + 1);
+    return number;
+  };
 
   render() {
     return (
@@ -23,7 +26,6 @@ class Landing extends Component {
             <p className="landing-text">
               Refresh page to view a random photo in collection.
             </p>
-            {/* <p>Landing Image</p> */}
             <img src={this.state.url} alt="unsplash" />
           </div>
         )}

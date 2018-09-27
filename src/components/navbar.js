@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = props => {
   return (
     <div className="navbar">
       <Link to="/" className="unsplash">
         Unsplash
       </Link>
       <li className="search">
-        <input type="text" className="search-input" placeholder="search" />
+        <form onSubmit={props.getPhotos}>
+          <input
+            className="search-input"
+            type="text"
+            name="searchInput"
+            placeholder="search for photos"
+          />
+          <button className="form_button">Search</button>
+        </form>
       </li>
       <Link to="/layout-one" className="page-one">
         Layout One

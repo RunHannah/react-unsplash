@@ -15,23 +15,55 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    await fetch(`https://api.unsplash.com/photos/?client_id=${apiKey}`)
+    // get photos from API
+    await fetch(
+      `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=california`
+    )
       .then(resp => {
         return resp.json();
       })
       .then(data => {
-        this.setState({ photos: data, loading: false });
+        console.log("app js data", data.results);
+
+        this.setState({ photos: data.results, loading: false });
       })
       .catch(function(error) {
         console.log(error);
       });
   }
+
+  getPhotos = async e => {
+    // get search input
+    let searchInput = e.target.elements.searchInput.value;
+    e.preventDefault();
+    e.target.reset();
+
+    // clearing state
+    this.setState({ photos: [], loading: true });
+
+    // get photos from API
+    await fetch(
+      `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=${searchInput}`
+    )
+      .then(resp => {
+        return resp.json();
+      })
+      .then(data => {
+        console.log("app js data", data.results);
+
+        this.setState({ photos: data.results, loading: false });
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  };
+
   render() {
     console.log("App component photos", this.state.photos);
 
     return (
       <div>
-        <Navbar />
+        <Navbar getPhotos={this.getPhotos} />
         {this.state.loading ? (
           <h2>Loading products...</h2>
         ) : (
