@@ -17,12 +17,8 @@ const Navbar = props => {
           />
         </form>
       </li>
-      <Link to="/layout-one" className="page-one">
-        Layout One
-      </Link>
-      <Link to="/layout-two" className="page-two">
-        Layout Two
-      </Link>
+      <Link to="/layout-one">Layout One</Link>
+      <Link to="/layout-two">Layout Two</Link>
     </div>
   );
 };

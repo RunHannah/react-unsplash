@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Landing from "./containers/landing";
-import ContentOne from "./containers/content-one";
-import ContentTwo from "./containers/content-two";
+import LayoutOne from "./containers/layout-one";
+import LayoutTwo from "./containers/layout-two";
 import "./App.css";
 
 const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
@@ -73,10 +73,10 @@ class App extends Component {
                 <Landing photos={this.state.photos} />
               </Route>
               <Route exact path="/layout-one">
-                <ContentOne photos={this.state.photos} />
+                <LayoutOne photos={this.state.photos} />
               </Route>
               <Route exact path="/layout-two">
-                <ContentTwo photos={this.state.photos} />
+                <LayoutTwo photos={this.state.photos} />
               </Route>
             </Switch>
           </div>

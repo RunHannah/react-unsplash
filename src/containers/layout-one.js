@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Photo from "../components/photo";
 
-class ContentTwo extends Component {
+class LayoutOne extends Component {
   state = {
     loading: true
   };
@@ -12,7 +12,7 @@ class ContentTwo extends Component {
 
   render() {
     return (
-      <div className="content-two">
+      <div className="layout-one">
         {this.state.loading ? (
           <h3>Retrieving Photos...</h3>
         ) : (
@@ -23,4 +23,4 @@ class ContentTwo extends Component {
   }
 }
 
-export default ContentTwo;
+export default LayoutOne;
