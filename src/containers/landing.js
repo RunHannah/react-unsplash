@@ -9,6 +9,8 @@ class Landing extends Component {
   componentDidMount() {
     const url = this.props.photos[this.randomNumber()].urls.regular;
     this.setState({ url, loading: false });
+
+    console.log("Landing this.state.url", this.state.url);
   }
 
   randomNumber = () => {
@@ -26,6 +28,7 @@ class Landing extends Component {
             <p className="landing-text">
               Refresh page to view a random photo in collection.
             </p>
+            {console.log("Landing image url", this.state.url)};
             <img src={this.state.url} alt="unsplash" />
           </div>
         )}
