@@ -13,7 +13,7 @@ const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
 class App extends Component {
   state = {
     photos: [],
-    loading: true
+    isLoading: true
   };
 
   async componentDidMount() {
@@ -25,7 +25,7 @@ class App extends Component {
         return resp.json();
       })
       .then(data => {
-        this.setState({ photos: data.results, loading: false });
+        this.setState({ photos: data.results, isLoading: false });
       })
       .catch(function(error) {
         console.log(error);
@@ -34,7 +34,7 @@ class App extends Component {
 
   getPhotos = async e => {
     // clearing state
-    this.setState({ photos: [], loading: true });
+    this.setState({ photos: [], isLoading: true });
 
     // get search input from user
     let searchInput = e.target.elements.searchInput.value;
@@ -49,7 +49,7 @@ class App extends Component {
         return resp.json();
       })
       .then(data => {
-        this.setState({ photos: data.results, loading: false });
+        this.setState({ photos: data.results, isLoading: false });
       })
       .catch(function(error) {
         console.log(error);
@@ -60,7 +60,7 @@ class App extends Component {
     return (
       <div>
         <Navbar getPhotos={this.getPhotos} />
-        {this.state.loading ? (
+        {this.state.isLoading ? (
           <p>Loading Images...</p>
         ) : (
           <div>

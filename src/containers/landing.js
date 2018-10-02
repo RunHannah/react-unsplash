@@ -3,12 +3,13 @@ import React, { Component } from "react";
 class Landing extends Component {
   state = {
     url: "",
-    loading: true
+    isLoading: true
   };
 
   componentDidMount() {
     const url = this.props.photos[this.randomNumber()].urls.regular;
-    this.setState({ url, loading: false });
+    this.setState({ url, isLoading: false });
+    console.log("url", url);
   }
 
   randomNumber = () => {
@@ -19,7 +20,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        {this.state.loading ? (
+        {this.state.isLoading ? (
           <p>Loading Images...</p>
         ) : (
           <div>

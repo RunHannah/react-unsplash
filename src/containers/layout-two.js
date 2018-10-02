@@ -3,11 +3,11 @@ import Photo from "../components/photo";
 
 class LayoutTwo extends Component {
   state = {
-    loading: true
+    isLoading: true
   };
 
   componentDidMount() {
-    this.setState({ loading: false });
+    this.setState({ isLoading: false });
   }
 
   render() {
