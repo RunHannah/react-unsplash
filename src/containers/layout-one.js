@@ -14,7 +14,7 @@ class LayoutOne extends Component {
     return (
       <div className="layout-one">
         {this.props.photos.map(photo => (
-          <Photo key={photo.id} photo={photo} photos={this.props.photos} />
+          <Photo key={photo.id} photo={photo} />
         ))}
       </div>
     );
