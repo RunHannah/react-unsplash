@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LayoutOne from "./layout-one";
 
 class Landing extends Component {
   state = {
@@ -31,10 +32,9 @@ class Landing extends Component {
           <p>Loading Images...</p>
         ) : (
           <div>
-            <p className="landing-text">
-              Refresh page to view a random photo in collection.
-            </p>
+            <p className="landing-text" />
             <img src={this.state.url} alt="unsplash" />
+            <LayoutOne photos={this.props.photos} />
           </div>
         )}
       </div>

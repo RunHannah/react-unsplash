@@ -79,7 +79,6 @@ class App extends Component {
                 <LayoutThree photos={this.state.photos} />
               </Route>
             </Switch>
-            <LayoutOne photos={this.state.photos} />
           </div>
         )}
       </div>
