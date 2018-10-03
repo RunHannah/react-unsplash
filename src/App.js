@@ -19,7 +19,7 @@ class App extends Component {
   async componentDidMount() {
     // get photos from API to render photos when page initially loads
     await fetch(
-      `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=california`
+      `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=california&per_page=20`
     )
       .then(resp => {
         return resp.json();
@@ -61,7 +61,7 @@ class App extends Component {
       <div>
         <Navbar getPhotos={this.getPhotos} />
         {this.state.isLoading ? (
-          <p>Loading Images...</p>
+          <p>isLoading Images...</p>
         ) : (
           <div>
             <Switch>

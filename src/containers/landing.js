@@ -7,15 +7,22 @@ class Landing extends Component {
   };
 
   componentDidMount() {
-    const url = this.props.photos[this.randomNumber()].urls.regular;
-    this.setState({ url, isLoading: false });
-    console.log("url", url);
-  }
+    // find only landscape photos with width > 4000
+    const photos = [];
 
-  randomNumber = () => {
-    const number = Math.floor(Math.random() * 10 + 1);
-    return number;
-  };
+    this.props.photos.map(photo => {
+      if (photo.width > "4000") {
+        photos.push(photo);
+      }
+      return photos;
+    });
+
+    const photosLength = photos.length;
+    const number = Math.floor(Math.random() * photosLength);
+    const url = photos[number].urls.regular;
+
+    this.setState({ url, isLoading: false });
+  }
 
   render() {
     return (
