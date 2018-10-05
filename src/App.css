@@ -1,6 +1,6 @@
 /********** CSS FLEXBOX **********/
 
-.navbar {
+/* .navbar {
   display: flex;
   list-style: none;
   height: 50px;
@@ -9,10 +9,10 @@
   font-weight: bold;
   font-size: 1em;
   padding: 10px;
-  align-items: center; /* x-axis */
-}
+  align-items: center; 
+} */
 
-.unsplash {
+/* .unsplash {
   flex: 1;
 }
 
@@ -40,7 +40,26 @@ input {
 
 .unsplash > i {
   font-size: 2em;
+} */
+
+/**** hamburger nav ****/
+.navbarWide {
+  display: none;
 }
+
+.navbarNarrow p {
+  float: left;
+}
+
+.navbarNarrowLinks {
+  display: none;
+}
+.navbarNarrowLinks a {
+  display: block;
+  float: left;
+  clear: left;
+}
+
 /********** CSS GRID **********/
 
 .landing {
@@ -84,17 +103,54 @@ img {
 }
 
 /********** MEDIA **********/
-@media all and (max-width: 400px) {
-  .navbar > li {
-    flex: 1 1 100%;
+@media (min-width: 680px) {
+  .navbar {
+    display: flex;
+    list-style: none;
+    height: 50px;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px;
+    align-items: center;
   }
 
-  .search {
-    order: 1;
+  .unsplash {
+    flex: 1;
   }
 
-  .layout-two {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: 200px;
+  .navbar a {
+    text-decoration: none;
+    padding: 25px;
+    color: grey;
+  }
+
+  .navbar a:hover {
+    color: black;
+  }
+
+  input {
+    width: 300px;
+    height: 30px;
+    font-size: 1em;
+    border-radius: 3px;
+    border: 1px solid grey;
+    text-align: center;
+  }
+  .navbar a:active {
+    color: #008eb2;
+  }
+
+  .unsplash > i {
+    font-size: 2em;
+  }
+
+  nav .navbarWide {
+    display: block;
+  }
+
+  nav .navbarNarrow {
+    display: none;
   }
 }
