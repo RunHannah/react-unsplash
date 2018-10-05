@@ -1,63 +1,65 @@
 /********** CSS FLEXBOX **********/
+@media (max-width: 840px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px;
+    justify-content: flex-start;
+  }
 
-/* .navbar {
-  display: flex;
-  list-style: none;
-  height: 50px;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1em;
-  padding: 10px;
-  align-items: center; 
-} */
+  .navbar a {
+    text-decoration: none;
+    padding: 25px;
+    color: grey;
+  }
 
-/* .unsplash {
-  flex: 1;
-}
+  .navbarWide a {
+    display: none;
+  }
 
-.navbar a {
-  text-decoration: none;
-  padding: 25px;
-  color: grey;
-}
+  .navbar a:hover {
+    color: black;
+  }
 
-.navbar a:hover {
-  color: black;
-}
+  input {
+    width: 300px;
+    height: 30px;
+    font-size: 1em;
+    border-radius: 3px;
+    border: 1px solid grey;
+    text-align: center;
+    margin-left: 22px;
+  }
+  .navbar a:active {
+    color: #008eb2;
+  }
 
-input {
-  width: 300px;
-  height: 30px;
-  font-size: 1em;
-  border-radius: 3px;
-  border: 1px solid grey;
-  text-align: center;
-}
-.navbar a:active {
-  color: #008eb2;
-}
+  .unsplash > i {
+    font-size: 2em;
+  }
+  /**** hamburger nav ****/
 
-.unsplash > i {
-  font-size: 2em;
-} */
+  button {
+    margin-left: 22px;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
 
-/**** hamburger nav ****/
-.navbarWide {
-  display: none;
-}
-
-.navbarNarrow p {
-  float: left;
-}
-
-.navbarNarrowLinks {
-  display: none;
-}
-.navbarNarrowLinks a {
-  display: block;
-  float: left;
-  clear: left;
+  .navbarNarrowLinks {
+    display: none;
+  }
+  .navbarNarrowLinks a {
+    display: block;
+    float: left;
+    clear: left;
+  }
 }
 
 /********** CSS GRID **********/
@@ -103,9 +105,10 @@ img {
 }
 
 /********** MEDIA **********/
-@media (min-width: 680px) {
+@media (min-width: 839px) {
   .navbar {
     display: flex;
+    align-items: center;
     list-style: none;
     height: 50px;
     height: 100%;
@@ -113,7 +116,6 @@ img {
     font-weight: bold;
     font-size: 1em;
     padding: 10px;
-    align-items: center;
   }
 
   .unsplash {
@@ -128,6 +130,10 @@ img {
 
   .navbar a:hover {
     color: black;
+  }
+
+  .navbarWide {
+    display: flex;
   }
 
   input {
@@ -146,11 +152,7 @@ img {
     font-size: 2em;
   }
 
-  nav .navbarWide {
-    display: block;
-  }
-
-  nav .navbarNarrow {
+  .navbarNarrow {
     display: none;
   }
 }

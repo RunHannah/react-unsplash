@@ -27,7 +27,7 @@ class Navbar extends Component {
             />
           </form>
         </li>
-        <div className="narbarWide">
+        <div className="navbarWide">
           <Link to="/layout-one">Layout One</Link>
           <Link to="/layout-two">Layout Two</Link>
           <Link to="/layout-three">Layout Three</Link>
