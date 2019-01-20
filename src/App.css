@@ -125,31 +125,21 @@ img {
 
 .menu ul li a {
   color: grey;
-  /* background: #09f; */
   padding: 21px 17px;
-
   margin: 0 auto;
-  /* font-weight: bold; */
   font-size: 15px;
   font-family: 'sans open', Arial, Helvetica, sans-serif;
   text-decoration: none;
   display: block;
-  /* width: auto; */
   height: 15px;
   white-space: nowrap;
   background-color: transparent;
   cursor: pointer;
-  /* line-height: 55px; */
-  /* text-align: center; */
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
 }
 
 .menu a:hover {
   color: #000000;
   text-decoration: none;
-  /* display: block; */
-  /* text-align: center; */
 }
 
 /********** MEDIA **********/

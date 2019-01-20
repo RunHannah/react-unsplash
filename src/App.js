@@ -5,7 +5,7 @@ import Landing from './containers/landing';
 import LayoutOne from './containers/layout-one';
 import LayoutTwo from './containers/layout-two';
 import LayoutThree from './containers/layout-three';
-import Menu from './containers/menu';
+import Menu from './components/menu';
 
 import './App.css';
 
