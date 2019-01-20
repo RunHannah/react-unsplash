@@ -1,12 +1,13 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import Navbar from "./components/navbar";
-import Landing from "./containers/landing";
-import LayoutOne from "./containers/layout-one";
-import LayoutTwo from "./containers/layout-two";
-import LayoutThree from "./containers/layout-three";
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Navbar from './components/navbar';
+import Landing from './containers/landing';
+import LayoutOne from './containers/layout-one';
+import LayoutTwo from './containers/layout-two';
+import LayoutThree from './containers/layout-three';
+import Menu from './containers/menu';
 
-import "./App.css";
+import './App.css';
 
 const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
 
@@ -58,12 +59,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Navbar getPhotos={this.getPhotos} />
         {this.state.isLoading ? (
           <p>isLoading Images...</p>
         ) : (
           <div>
+            <Menu />
             <Switch>
               {/* Hosted on gh-pages so home path is /react-unsplash */}
               <Route exact path="/react-unsplash/">
@@ -81,7 +83,7 @@ class App extends Component {
             </Switch>
           </div>
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
