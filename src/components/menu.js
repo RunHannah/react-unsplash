@@ -6,49 +6,49 @@ class Menu extends Component {
       <div className="menu">
         <ul>
           <li>
-            <a href="#">Wallpapers</a>
+            <a>Wallpapers</a>
           </li>
           <li>
-            <a href="#">Textures & Patterns</a>
+            <a>Textures & Patterns</a>
           </li>
           <li>
-            <a href="#">Nature</a>
+            <a>Nature</a>
           </li>
           <li>
-            <a href="#">Current Events</a>
+            <a>Current Events</a>
           </li>
           <li>
-            <a href="#">Architecture</a>
+            <a>Architecture</a>
           </li>
           <li>
-            <a href="#">Business & Work</a>
+            <a>Business & Work</a>
           </li>
           <li>
-            <a href="#">Animals</a>
+            <a>Animals</a>
           </li>
           <li>
-            <a href="#">Travel</a>
+            <a>Travel</a>
           </li>
           <li>
-            <a href="#">Fashion</a>
+            <a>Fashion</a>
           </li>
           <li>
-            <a href="#">Food & Drink</a>
+            <a>Food & Drink</a>
           </li>
           <li>
-            <a href="#">Spirituality</a>
+            <a>Spirituality</a>
           </li>
           <li>
-            <a href="#">Experimental</a>
+            <a>Experimental</a>
           </li>
           <li>
-            <a href="#">People</a>
+            <a>People</a>
           </li>
           <li>
-            <a href="#">Health</a>
+            <a>Health</a>
           </li>
           <li>
-            <a href="#">Arts & Culture</a>
+            <a>Arts & Culture</a>
           </li>
         </ul>
       </div>

@@ -96,14 +96,6 @@ img {
   padding: 40px;
 }
 
-.layout-three {
-  display: grid;
-  grid-template-columns: minmax(auto, 25%) 3fr 6em;
-  grid-template-rows: minmax(600px);
-  grid-gap: 50px 1em;
-  padding: 40px;
-}
-
 /********** MENU BAR **********/
 
 .menu {

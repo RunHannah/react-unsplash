@@ -4,7 +4,6 @@ import Navbar from './components/navbar';
 import Landing from './containers/landing';
 import LayoutOne from './containers/layout-one';
 import LayoutTwo from './containers/layout-two';
-import LayoutThree from './containers/layout-three';
 import Menu from './components/menu';
 
 import './App.css';
@@ -76,9 +75,6 @@ class App extends Component {
               </Route>
               <Route exact path="/layout-two">
                 <LayoutTwo photos={this.state.photos} />
-              </Route>
-              <Route exact path="/layout-three">
-                <LayoutThree photos={this.state.photos} />
               </Route>
             </Switch>
           </div>
