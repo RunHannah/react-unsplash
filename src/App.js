@@ -6,9 +6,11 @@ import LayoutOne from './containers/layout-one';
 import LayoutTwo from './containers/layout-two';
 import Menu from './components/menu';
 
+import { unsplashInitialLoad, searchPhotos } from './UnsplashApi';
+
 import './App.css';
 
-const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
+// const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
 
 class App extends Component {
   state = {
@@ -16,14 +18,8 @@ class App extends Component {
     isLoading: true
   };
 
-  async componentDidMount() {
-    // get photos from API to render photos when page initially loads
-    await fetch(
-      `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=california&per_page=20`
-    )
-      .then(resp => {
-        return resp.json();
-      })
+  componentDidMount() {
+    unsplashInitialLoad()
       .then(data => {
         this.setState({ photos: data.results, isLoading: false });
       })
@@ -41,13 +37,7 @@ class App extends Component {
     e.preventDefault();
     e.target.reset();
 
-    // get photos from API
-    await fetch(
-      `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=${searchInput}`
-    )
-      .then(resp => {
-        return resp.json();
-      })
+    searchPhotos(searchInput)
       .then(data => {
         this.setState({ photos: data.results, isLoading: false });
       })
