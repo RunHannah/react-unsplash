@@ -27,9 +27,6 @@ class App extends Component {
   }
 
   getPhotos = async e => {
-    // clearing state
-    // this.setState({ photos: [], isLoading: true });
-
     // get search input from user
     let searchInput = e.target.elements.searchInput.value;
     e.preventDefault();
