@@ -10,8 +10,6 @@ import { unsplashInitialLoad, photoSearchApiCall } from './UnsplashApi';
 
 import './App.css';
 
-// const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
-
 class App extends Component {
   state = {
     photos: [],

@@ -3,7 +3,7 @@ const apiKey = process.env.REACT_APP_UNSPLASH_API_KEY;
 // get photos from API to render photos when page initially loads
 export async function unsplashInitialLoad() {
   return await fetch(
-    `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=california&per_page=20`
+    `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=stars&per_page=54`
   ).then(resp => resp.json());
 }
 
