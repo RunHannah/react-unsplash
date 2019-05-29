@@ -8,7 +8,7 @@ export async function unsplashInitialLoad() {
 }
 
 // get photos from search input
-export async function searchPhotos(searchInput) {
+export async function photoSearchApiCall(searchInput) {
   return await fetch(
     `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=${searchInput}`
   ).then(resp => {

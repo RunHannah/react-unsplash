@@ -1,54 +1,74 @@
 import React, { Component } from 'react';
 
 class Menu extends Component {
+  handleOnClick = search => {
+    this.props.photoSearch(search);
+  };
+
   render() {
     return (
       <div className="menu">
         <ul>
           <li>
-            <a>Wallpapers</a>
+            <a onClick={() => this.handleOnClick('Wallpapers')}>Wallpapers</a>
           </li>
           <li>
-            <a>Textures & Patterns</a>
+            <a onClick={() => this.handleOnClick('Textures & Patterns')}>
+              Textures & Patterns
+            </a>
           </li>
           <li>
-            <a>Nature</a>
+            <a onClick={() => this.handleOnClick('Nature')}>Nature</a>
           </li>
           <li>
-            <a>Current Events</a>
+            <a onClick={() => this.handleOnClick('Current Events')}>
+              Current Events
+            </a>
           </li>
           <li>
-            <a>Architecture</a>
+            <a onClick={() => this.handleOnClick('Architecture')}>
+              Architecture
+            </a>
           </li>
           <li>
-            <a>Business & Work</a>
+            <a onClick={() => this.handleOnClick('Business & Work')}>
+              Business & Work
+            </a>
           </li>
           <li>
-            <a>Animals</a>
+            <a onClick={() => this.handleOnClick('Animals')}>Animals</a>
           </li>
           <li>
-            <a>Travel</a>
+            <a onClick={() => this.handleOnClick('Travel')}>Travel</a>
           </li>
           <li>
-            <a>Fashion</a>
+            <a onClick={() => this.handleOnClick('Fashion')}>Fashion</a>
           </li>
           <li>
-            <a>Food & Drink</a>
+            <a onClick={() => this.handleOnClick('Food & Drink')}>
+              Food & Drink
+            </a>
           </li>
           <li>
-            <a>Spirituality</a>
+            <a onClick={() => this.handleOnClick('Spirituality')}>
+              Spirituality
+            </a>
           </li>
           <li>
-            <a>Experimental</a>
+            <a onClick={() => this.handleOnClick('Experimental')}>
+              Experimental
+            </a>
           </li>
           <li>
-            <a>People</a>
+            <a onClick={() => this.handleOnClick('People')}>People</a>
           </li>
           <li>
-            <a>Health</a>
+            <a onClick={() => this.handleOnClick('Health')}>Health</a>
           </li>
           <li>
-            <a>Arts & Culture</a>
+            <a onClick={() => this.handleOnClick('Arts & Culture')}>
+              Arts & Culture
+            </a>
           </li>
         </ul>
       </div>

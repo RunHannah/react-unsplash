@@ -6,7 +6,7 @@ import LayoutOne from './containers/layout-one';
 import LayoutTwo from './containers/layout-two';
 import Menu from './components/menu';
 
-import { unsplashInitialLoad, searchPhotos } from './UnsplashApi';
+import { unsplashInitialLoad, photoSearchApiCall } from './UnsplashApi';
 
 import './App.css';
 
@@ -30,14 +30,20 @@ class App extends Component {
 
   getPhotos = async e => {
     // clearing state
-    this.setState({ photos: [], isLoading: true });
+    // this.setState({ photos: [], isLoading: true });
 
     // get search input from user
     let searchInput = e.target.elements.searchInput.value;
     e.preventDefault();
     e.target.reset();
 
-    searchPhotos(searchInput)
+    this.photoSearch(searchInput);
+  };
+
+  photoSearch = searchInput => {
+    this.setState({ photos: [], isLoading: true });
+
+    photoSearchApiCall(searchInput)
       .then(data => {
         this.setState({ photos: data.results, isLoading: false });
       })
@@ -51,10 +57,10 @@ class App extends Component {
       <React.Fragment>
         <Navbar getPhotos={this.getPhotos} />
         {this.state.isLoading ? (
-          <p>isLoading Images...</p>
+          <p>Loading Images...</p>
         ) : (
           <div>
-            <Menu />
+            <Menu photoSearch={this.photoSearch} />
             <Switch>
               {/* Hosted on gh-pages so home path is /react-unsplash */}
               <Route exact path="/react-unsplash/">
