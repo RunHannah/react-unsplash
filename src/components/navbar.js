@@ -14,7 +14,7 @@ class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
-        <Link to="/react-unsplash/" className="unsplash">
+        <Link to="/react-unsplash/" className="camera">
           <i className="fas fa-camera" />
         </Link>
         <li className="search">
@@ -28,8 +28,8 @@ class Navbar extends Component {
           </form>
         </li>
         <div className="navbarWide">
-          <Link to="/layout-one">Layout One</Link>
-          <Link to="/layout-two">Layout Two</Link>
+          <Link to="/layout-one">Grid</Link>
+          <Link to="/layout-two">Flexbox</Link>
         </div>
         <div className="navbarNarrow">
           <button style={{ color: 'pink' }} onClick={this.hamburgerToggle}>

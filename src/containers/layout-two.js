@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Photo from "../components/photo";
+import React, { Component } from 'react';
+import Photo from '../components/photo';
 
 class LayoutTwo extends Component {
   state = {

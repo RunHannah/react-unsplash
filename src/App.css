@@ -38,7 +38,7 @@
     color: #008eb2;
   }
 
-  .unsplash > i {
+  .camera > i {
     font-size: 2em;
   }
   /**** hamburger nav ****/
@@ -64,13 +64,13 @@
 
 /********** CSS GRID **********/
 
-.landing {
+/* .landing {
   grid-column: 1 / -1;
 }
 
 .landing-text {
   text-align: center;
-}
+} */
 
 img {
   object-fit: cover;
@@ -80,20 +80,42 @@ img {
 }
 
 .layout-one {
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 4fr));
-  grid-gap: 15px;
-  grid-auto-rows: 500px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 4fr));
+  grid-gap: 10px;
+  align-items: start;
+  /* justify-items: center; */
+  margin: auto;
+  width: 100%;
 }
 
+.layout-one div:nth-child(4) {
+  grid-column: span 3;
+}
+
+/********** CSS FLEXBOX **********/
 .layout-two {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
-  grid-gap: 15px;
-  grid-auto-rows: 500px;
-  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.layout-two > div {
+  margin: 10px;
+}
+
+.layout-two > div:nth-child(odd) {
+  width: 10%;
+}
+.layout-two > div:nth-child(even) {
+  width: 20%;
+}
+.layout-two > div:nth-child(2),
+.layout-two > div:nth-child(4),
+.layout-two > div:nth-child(9) {
+  width: 60%;
 }
 
 /********** MENU BAR **********/
@@ -148,7 +170,7 @@ img {
     padding: 10px;
   }
 
-  .unsplash {
+  .camera {
     flex: 1;
   }
 
@@ -178,7 +200,7 @@ img {
     color: #008eb2;
   }
 
-  .unsplash > i {
+  .camera > i {
     font-size: 2em;
   }
 
