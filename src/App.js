@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Landing from './containers/landing';
-import LayoutOne from './containers/layout-one';
-import LayoutTwo from './containers/layout-two';
+import Grid from './containers/grid';
+import Flexbox from './containers/flexbox';
 import Menu from './components/menu';
 
 import { unsplashInitialLoad, photoSearchApiCall } from './UnsplashApi';
@@ -61,11 +61,11 @@ class App extends Component {
               <Route exact path="/react-unsplash/">
                 <Landing photos={this.state.photos} />
               </Route>
-              <Route exact path="/layout-one">
-                <LayoutOne photos={this.state.photos} />
+              <Route exact path="/grid">
+                <Grid photos={this.state.photos} />
               </Route>
-              <Route exact path="/layout-two">
-                <LayoutTwo photos={this.state.photos} />
+              <Route exact path="/flexbox">
+                <Flexbox photos={this.state.photos} />
               </Route>
             </Switch>
           </div>

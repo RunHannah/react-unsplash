@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import LayoutOne from "./layout-one";
+import React, { Component } from 'react';
+import Grid from './grid';
 
 class Landing extends Component {
   state = {
-    url: "",
+    url: '',
     isLoading: true
   };
 
@@ -12,7 +12,7 @@ class Landing extends Component {
     const photos = [];
 
     this.props.photos.map(photo => {
-      if (photo.width > "4000") {
+      if (photo.width > '4000') {
         photos.push(photo);
       }
       return photos;
@@ -34,7 +34,7 @@ class Landing extends Component {
           <div>
             <p className="landing-text" />
             <img src={this.state.url} alt="unsplash" />
-            <LayoutOne photos={this.props.photos} />
+            <Grid photos={this.props.photos} />
           </div>
         )}
       </div>

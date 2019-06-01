@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Photo from '../components/photo';
 
-class LayoutTwo extends Component {
+class Grid extends Component {
   state = {
     isLoading: true
   };
@@ -12,7 +12,7 @@ class LayoutTwo extends Component {
 
   render() {
     return (
-      <div className="layout-two">
+      <div className="grid">
         {this.props.photos.map(photo => (
           <Photo key={photo.id} photo={photo} />
         ))}
@@ -21,4 +21,4 @@ class LayoutTwo extends Component {
   }
 }
 
-export default LayoutTwo;
+export default Grid;

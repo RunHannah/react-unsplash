@@ -28,19 +28,19 @@ class Navbar extends Component {
           </form>
         </li>
         <div className="navbarWide">
-          <Link to="/layout-one">Grid</Link>
-          <Link to="/layout-two">Flexbox</Link>
+          <Link to="/grid">Grid</Link>
+          <Link to="/flexbox">Flexbox</Link>
         </div>
         <div className="navbarNarrow">
           <button style={{ color: 'pink' }} onClick={this.hamburgerToggle}>
             {'\u2630'}
           </button>
           <div className="navbarNarrowLinks">
-            <Link to="/layout-one" onClick={this.hamburgerToggle}>
-              Layout One
+            <Link to="/grid" onClick={this.hamburgerToggle}>
+              Grid
             </Link>
-            <Link to="/layout-two" onClick={this.hamburgerToggle}>
-              Layout Two
+            <Link to="/flexbox" onClick={this.hamburgerToggle}>
+              Flexbox
             </Link>
           </div>
         </div>
