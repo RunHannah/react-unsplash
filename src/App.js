@@ -50,6 +50,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        {console.log('window', window.innerWidth)}
         <Navbar getPhotos={this.getPhotos} />
         {this.state.isLoading ? (
           <p>Loading Images...</p>

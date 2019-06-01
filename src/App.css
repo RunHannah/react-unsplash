@@ -1,4 +1,42 @@
-/********** CSS FLEXBOX **********/
+/********** MENU BAR **********/
+
+.menu {
+  text-align: center;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0px 5px;
+  display: inline-block;
+  padding: 0;
+}
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  color: grey;
+  padding: 21px 17px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: 'sans open', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: block;
+  height: 15px;
+  white-space: nowrap;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+/******************** MEDIA MOBILE ********************/
 @media (max-width: 840px) {
   .navbar {
     display: flex;
@@ -62,102 +100,15 @@
   }
 }
 
-/********** CSS GRID **********/
-
-/* .landing {
-  grid-column: 1 / -1;
-}
-
-.landing-text {
-  text-align: center;
-} */
-
 img {
   object-fit: cover;
   width: 100%;
-  max-height: 500px;
-  /* height: 100%; */
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 4fr));
-  grid-gap: 10px;
-  align-items: start;
-  /* justify-items: center; */
-  margin: auto;
-  width: 100%;
-}
-
-.grid div:nth-child(4) {
-  grid-column: span 3;
-}
-
-/********** CSS FLEXBOX **********/
-.flexbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 100vh;
-  flex-wrap: wrap;
-}
-
-.flexbox > div {
-  margin: 10px;
-}
-
-.flexbox > div:nth-child(odd) {
-  width: 10%;
-}
-.flexbox > div:nth-child(even) {
-  width: 20%;
-}
-.flexbox > div:nth-child(2),
-.flexbox > div:nth-child(4),
-.flexbox > div:nth-child(9) {
-  width: 60%;
-}
-
-/********** MENU BAR **********/
-
-.menu {
-  text-align: center;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 5px;
-}
-
-.menu ul {
-  list-style: none;
-  margin: 0px 5px;
-  display: inline-block;
-  padding: 0;
-}
-.menu ul li {
-  display: inline-block;
-}
-
-.menu ul li a {
-  color: grey;
-  padding: 21px 17px;
-  margin: 0 auto;
-  font-size: 15px;
-  font-family: 'sans open', Arial, Helvetica, sans-serif;
-  text-decoration: none;
+  max-height: 300px;
   display: block;
-  height: 15px;
-  white-space: nowrap;
-  background-color: transparent;
-  cursor: pointer;
 }
 
-.menu a:hover {
-  color: #000000;
-  text-decoration: none;
-}
-
-/********** MEDIA **********/
-@media (min-width: 839px) {
+/****************************** MEDIA DESKTOP ******************************/
+@media (min-width: 841px) {
   .navbar {
     display: flex;
     align-items: center;
@@ -206,5 +157,56 @@ img {
 
   .navbarNarrow {
     display: none;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 500px;
+    display: block;
+  }
+
+  /********** CSS GRID LAYOUT **********/
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 10px;
+    align-items: start;
+    justify-items: center;
+    margin: auto;
+    width: 80%;
+  }
+
+  .grid div:nth-child(4),
+  .grid div:nth-child(8),
+  .grid div:nth-child(12) {
+    grid-column: span 4;
+  }
+
+  /********** CSS FLEXBOX LAYOUT **********/
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    flex-wrap: wrap;
+  }
+
+  .flexbox > div {
+    margin: 10px 0 10px 0;
+  }
+
+  .flexbox > div:nth-child(odd) {
+    width: 30%;
+  }
+  .flexbox > div:nth-child(even) {
+    width: 30%;
+  }
+  .flexbox > div:nth-child(1),
+  .flexbox > div:nth-child(5),
+  .flexbox > div:nth-child(9) {
+    width: 100%;
   }
 }
