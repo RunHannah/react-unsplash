@@ -107,6 +107,10 @@ input:hover {
   .mainNav > .navLayouts {
     display: none;
   }
+
+  input {
+    width: 250px;
+  }
 }
 
 /****************************** MEDIA DESKTOP ******************************/
