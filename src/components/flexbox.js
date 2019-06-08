@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Photo from '../components/photo';
+import Photo from './photo';
+import PropTypes from 'prop-types';
 
 class Flexbox extends Component {
   state = {
@@ -20,5 +21,9 @@ class Flexbox extends Component {
     );
   }
 }
+
+Flexbox.propTypes = {
+  photos: PropTypes.array.isRequired
+};
 
 export default Flexbox;

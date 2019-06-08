@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Menu extends Component {
   state = {
@@ -41,4 +42,9 @@ class Menu extends Component {
     );
   }
 }
+
+Menu.propTypes = {
+  photoSearch: PropTypes.func.isRequired
+};
+
 export default Menu;

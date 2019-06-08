@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/navbar';
-import Landing from './containers/landing';
-import Grid from './containers/grid';
-import Flexbox from './containers/flexbox';
+import Landing from './components/landing';
+import Grid from './components/grid';
+import Flexbox from './components/flexbox';
 import Menu from './components/menu';
 
 import { unsplashInitialLoad, photoSearchApiCall } from './UnsplashApi';
@@ -50,7 +50,6 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        {console.log('window', window.innerWidth)}
         <Navbar getPhotos={this.getPhotos} />
         {this.state.isLoading ? (
           <p>Loading Images...</p>

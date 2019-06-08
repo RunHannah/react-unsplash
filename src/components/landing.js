@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Landing extends Component {
   state = {
@@ -41,5 +42,9 @@ class Landing extends Component {
     );
   }
 }
+
+Landing.propTypes = {
+  photos: PropTypes.array.isRequired
+};
 
 export default Landing;

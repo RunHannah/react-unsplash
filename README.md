@@ -1,14 +1,11 @@
-### Unsplash API Images
+### Unsplash
 
 Returns a collection of photos and responds in changes to screen width. Built with React and Unsplash API.
 
 ### Deployed here: https://runhannah.github.io/react-unsplash
 
-#### Practice building responsive layouts using CSS Flex and Grid.
-
-#### Includes React Router
+#### Responsive layouts using CSS Flexbox and Grid.
 
 - CSS Flex and Grid
-- Random Number for Landing page
 - React Router
 - Form for search
